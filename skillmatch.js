@@ -56,3 +56,29 @@ function matchDeHabilidades(habilidades, requisitos) {
     compatibilidade,
   };
 }
+function obterClassificacao(percentual) {
+  if (percentual >= 80) return "Alta Compatibilidade";
+  if (percentual >= 50) return "Média Compatibilidade";
+  return "Baixa Compatibilidade";
+}
+
+function compararCandidatoVagas(candidato, vagas) {
+  const resultados = [];
+
+  for (const vaga of vagas) {
+    const match = matchDeHabilidades(candidato.habilidades, vaga.requisitos);
+
+    resultados.push(
+      new Vaga(
+        vaga.empresa,
+        vaga.cargo,
+        `${match.compatibilidade.toFixed(0)}%`,
+        match.encontradas,
+        match.faltantes,
+        obterClassificacao(match.compatibilidade),
+      ),
+    );
+  }
+
+  return resultados;
+}
