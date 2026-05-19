@@ -31,10 +31,6 @@ Praticar os principais conceitos do Módulo 01:
 - classes;
 - herança;
 - this;
-- callbacks;
-- closures;
-- Promises;
-- async/await;
 - GitHub;
 - Kanban.
 
@@ -55,6 +51,10 @@ Você pode executar de uma destas formas:
 
 - Go Live
 - Prettier
+
+## Kanban link
+
+https://github.com/users/LuizaSchneider/projects/2
 
 ```txt
 skillmatch-js/
