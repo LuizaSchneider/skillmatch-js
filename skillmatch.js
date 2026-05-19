@@ -43,3 +43,16 @@ const vagasDeEmprego = [
     requisitos: ["JavaScript", "Arrays", "Objetos", "Funções"],
   },
 ];
+function matchDeHabilidades(habilidades, requisitos) {
+  const encontradas = requisitos.filter((req) => habilidades.includes(req));
+
+  const faltantes = requisitos.filter((req) => !habilidades.includes(req));
+
+  const compatibilidade = (encontradas.length / requisitos.length) * 100;
+
+  return {
+    encontradas,
+    faltantes,
+    compatibilidade,
+  };
+}
