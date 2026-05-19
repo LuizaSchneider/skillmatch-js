@@ -16,6 +16,29 @@ class Vaga {
   }
 }
 
+class ResultadoVaga extends Vaga {
+  constructor(
+    empresa,
+    cargo,
+    compatibilidade,
+    habilidadesEncontradas,
+    habilidadesFaltantes,
+    classificacao,
+    nivel,
+  ) {
+    super(
+      empresa,
+      cargo,
+      compatibilidade,
+      habilidadesEncontradas,
+      habilidadesFaltantes,
+      classificacao,
+    );
+
+    this.nivel = nivel;
+  }
+}
+
 const luiza = {
   nome: "Luiza",
   area: "Front-End",
