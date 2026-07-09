@@ -1,11 +1,49 @@
-/* body {
-  background: blue;
-} */
+body {
+  margin: 0px;
+  font-family: "Roboto", Helvetica, sans-serif;
+  color: #111111;
+}
 
-/* .formularios {
-  display: block;
-} */
-
+h1,
+h2,
+h3,
+h4,
+ul,
+p,
+blockquote,
+dd {
+  margin: 0px;
+}
 .header-bg {
   background-color: #14213d;
+}
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.introducao-bg {
+  background-color: #efefef;
+  height: 1000px;
+  display: flex;
+}
+
+.container-bg {
+  background-color: #ffffff;
+  width: 360px;
+  padding: 20px;
+  margin-top: 40px;
+  border-radius: 4px;
+}
+.container {
+  box-sizing: border-box;
+  max-width: 1200px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-left: auto;
+  margin-right: auto;
 }
