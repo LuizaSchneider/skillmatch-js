@@ -22,15 +22,22 @@
       <div class="container-bg container">
         <h2>Seu Perfil</h2>
         <p>Preencha seus dados</p>
-        <div class="formularios container">
-          <label for="nome">Nome</label>
-          <input type="text" id="nome" name="nome" />
-          <label for="atuacao">Área de Atuação</label>
-          <input type="text" id="atuacao" name="atuacao" />
-        </div>
+        <form action="">
+          <p>Nome</p>
+          <input type="text" name="nome" id="nome" />
+          <p>Área de Atuação</p>
+          <input type="text" name="atuacao" id="atuacao" />
+          <p>Selecione suas Abilidades</p>
+          <p><input type="checkbox" value="javascript" />JavaScript</p>
+          <p>Meses de Experiencia</p>
+          <input type="number" name="experiencia" id="experiencia" />
+          <p><input type="submit" value="Analisar Compatibilidade" /></p>
+        </form>
       </div>
     </main>
 
-    <footer class="footer">SkillMatch — projeto avaliativo, Módulo 01.</footer>
+    <footer class="footer">
+      <p>SkillMatch — projeto avaliativo, Módulo 01.</p>
+    </footer>
   </body>
 </html>
