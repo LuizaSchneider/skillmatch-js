@@ -73,6 +73,12 @@ dd {
   margin-bottom: 6px;
 }
 
+.habilidades p span {
+  color: #bababa;
+  font-weight: lighter;
+  font-size: 12px;
+}
+
 /* container extra pra agrupar os botões*/
 .habilidades-botoes {
   display: flex;
@@ -91,6 +97,16 @@ dd {
   color: #111111;
   width: auto;
   gap: 0;
+}
+
+.habilidades input[type="button"].selecionado {
+  background-color: #14213d;
+  color: #ffffff;
+}
+
+.habilidades input[type="button"].selecionado:hover {
+  background-color: #3a4c6f;
+  color: #ffffff;
 }
 
 .habilidades input[type="button"]:hover {
