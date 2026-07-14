@@ -20,24 +20,45 @@
 
     <main class="introducao-bg">
       <div class="container-bg container">
-        <h2>Seu Perfil</h2>
-        <p>Preencha seus dados</p>
-        <form action="">
-          <p>Nome</p>
-          <input type="text" name="nome" id="nome" />
-          <p>Área de Atuação</p>
-          <input type="text" name="atuacao" id="atuacao" />
-          <p>Selecione suas Abilidades</p>
-          <p><input type="checkbox" value="javascript" />JavaScript</p>
-          <p>Meses de Experiencia</p>
-          <input type="number" name="experiencia" id="experiencia" />
-          <p><input type="submit" value="Analisar Compatibilidade" /></p>
-        </form>
+        <div class="titulo-container">
+          <h2>Seu Perfil</h2>
+          <p>Preencha seus dados</p>
+        </div>
+        <div class="formulario">
+          <form action="./assets/script/dados.js">
+            <p><label for="inome">Nome</label></p>
+            <input type="text" name="nome" id="inome" />
+            <p><label for="iatuacao">Área de Atuação</label></p>
+            <input type="text" name="atuacao" id="iatuacao" />
+
+            <div class="habilidades">
+              <p>Selecione suas Habilidades</p>
+              <div class="habilidades-botoes">
+                <input type="button" value="HTML" />
+                <input type="button" value="CSS" />
+                <input type="button" value="JavaScript" />
+                <input type="button" value="Lógica de Programação" />
+                <input type="button" value="GitHub" />
+                <input type="button" value="Kanban" />
+                <input type="button" value="Arrays" />
+                <input type="button" value="Objetos" />
+                <input type="button" value="Funções" />
+                <input type="button" value="Figma" />
+              </div>
+            </div>
+
+            <p>Meses de Experiência</p>
+            <input type="number" name="experiencia" id="experiencia" />
+            <p><input type="submit" value="Analisar Compatibilidade" /></p>
+          </form>
+        </div>
       </div>
     </main>
 
-    <footer class="footer">
-      <p>SkillMatch — projeto avaliativo, Módulo 01.</p>
+    <footer class="footer-bg">
+      <div class="footer">
+        <p>SkillMatch — projeto avaliativo. Módulo 01.</p>
+      </div>
     </footer>
   </body>
 </html>
