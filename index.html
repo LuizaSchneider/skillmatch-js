@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Skillmatch | Recrutamento & Carreira</title>
+    <meta
+      name="description"
+      content="Compare seu perfil com vagas de front-end júnior e descubra sua compatibilidade."
+    />
     <link rel="icon" href="./assets/img/favcon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
 
-  <body id="infoCandidato">
+  <body>
     <header class="header-bg">
       <div class="header container">
         <a href="./">
@@ -19,39 +23,50 @@
     </header>
 
     <main class="introducao-bg">
-      <div class="container-bg container">
-        <div class="titulo-container">
-          <h2>Seu Perfil</h2>
-          <p>Preencha seus dados</p>
-        </div>
-        <div class="formulario">
-          <form id="formPerfil" action="./assets/script/dados.js">
-            <p><label for="inome">Nome</label></p>
-            <input type="text" name="nome" id="inome" />
-            <p><label for="iatuacao">Área de Atuação</label></p>
-            <input type="text" name="atuacao" id="iatuacao" />
+      <div class="container">
+        <div class="card card-perfil">
+          <div class="titulo-container">
+            <h1>Seu Perfil</h1>
+            <p>Preencha seus dados</p>
+          </div>
+          <div class="formulario">
+            <form id="formPerfil" action="./assets/script/dados.js">
+              <p><label for="inome">Nome</label></p>
+              <input type="text" name="nome" id="inome" />
+              <p><label for="iatuacao">Área de Atuação</label></p>
+              <input type="text" name="atuacao" id="iatuacao" />
 
-            <div class="habilidades">
-              <p>Selecione suas Habilidades<span> (*até 5)</span></p>
-              <div class="habilidades-botoes">
-                <input type="button" value="HTML" />
-                <input type="button" value="CSS" />
-                <input type="button" value="JavaScript" />
-                <input type="button" value="Lógica de Programação" />
-                <input type="button" value="GitHub" />
-                <input type="button" value="Kanban" />
-                <input type="button" value="Arrays" />
-                <input type="button" value="Objetos" />
-                <input type="button" value="Funções" />
-                <input type="button" value="Figma" />
+              <div class="habilidades">
+                <p>Selecione suas Habilidades</p>
+                <div class="habilidades-botoes">
+                  <input type="button" value="HTML" />
+                  <input type="button" value="CSS" />
+                  <input type="button" value="JavaScript" />
+                  <input type="button" value="Lógica de Programação" />
+                  <input type="button" value="GitHub" />
+                  <input type="button" value="Kanban" />
+                  <input type="button" value="Arrays" />
+                  <input type="button" value="Objetos" />
+                  <input type="button" value="Funções" />
+                  <input type="button" value="Figma" />
+                </div>
               </div>
-            </div>
 
-            <p>Meses de Experiência</p>
-            <input type="number" name="experiencia" id="experiencia" />
-            <p><input type="submit" value="Analisar Compatibilidade" /></p>
-          </form>
+              <p><label for="experiencia">Meses de Experiência</label></p>
+              <input type="number" name="experiencia" id="experiencia" />
+              <p><input type="submit" value="Analisar Compatibilidade" /></p>
+            </form>
+          </div>
           <p id="mensagemErro" role="alert" aria-live="assertive"></p>
+        </div>
+
+        <div class="card card-resultados">
+          <section id="resultados" aria-live="polite">
+            <p class="estado-mensagem estado-inicial">
+              Preencha seu perfil e clique em "Analisar Compatibilidade" para
+              ver as vagas.
+            </p>
+          </section>
         </div>
       </div>
     </main>
@@ -61,6 +76,7 @@
         <p>SkillMatch — projeto avaliativo. Módulo 01.</p>
       </div>
     </footer>
+
     <script type="module" src="./assets/script/main.js"></script>
   </body>
 </html>

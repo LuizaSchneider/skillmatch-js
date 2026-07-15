@@ -28,27 +28,37 @@ dd {
 .titulo-container {
   padding-bottom: 40px;
 }
-.container-bg {
-  display: block;
-  background-color: #ffffff;
-  height: auto;
-  width: 360px;
-  padding: 30px;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  border-radius: 4px;
-}
-.container-bg p {
-  padding-bottom: 6px;
-  font-weight: bold;
-  font-size: 14px;
-}
 .container {
   box-sizing: border-box;
   padding-left: 40px;
   padding-right: 40px;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.card {
+  display: block;
+  background-color: #ffffff;
+  height: auto;
+  width: 360px;
+  padding: 30px;
+  margin-top: 40px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+}
+
+.card:first-child {
+  margin-bottom: 0;
+}
+
+.card p {
+  padding-bottom: 6px;
+  font-weight: bold;
+  font-size: 14px;
 }
 
 .formulario input[type="text"],
@@ -123,4 +133,62 @@ dd {
   align-items: center;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+#resultados {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.card-vaga {
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  padding: 16px;
+}
+
+.card-vaga.alta {
+  border-left: 6px solid #2e7d32;
+}
+.card-vaga.media {
+  border-left: 6px solid #f9a825;
+}
+.card-vaga.baixa {
+  border-left: 6px solid #c62828;
+}
+
+.card-vaga h3 {
+  margin-bottom: 4px;
+}
+
+.card-vaga .habilidades-lista {
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+.estado-mensagem {
+  text-align: center;
+  padding: 20px;
+  font-weight: bold;
+}
+.selo-melhor {
+  color: #14213d;
+  font-weight: bold;
+}
+
+.card-vaga.melhor-vaga {
+  border-width: 2px;
+}
+
+.recomendacao {
+  background-color: #eef6ee;
+  border-radius: 4px;
+  padding: 12px;
+  font-weight: bold;
+}
+
+.estado-inicial {
+  color: #666666;
+  font-weight: normal;
 }

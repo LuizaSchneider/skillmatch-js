@@ -1,5 +1,9 @@
-import { iniciarBotoesHabilidades, iniciarFormulario } from "./ui.js";
-import { Vaga } from "./motor.js";
+import {
+  iniciarBotoesHabilidades,
+  iniciarFormulario,
+  restaurarPerfilSalvo,
+} from "./ui.js";
 
+restaurarPerfilSalvo();
 iniciarBotoesHabilidades();
 iniciarFormulario();

@@ -43,3 +43,55 @@ export class VagaFrontEnd extends Vaga {
     return { ...resultadoBase, percentual: percentualComPeso };
   }
 }
+
+export function processarAnalise(candidato, vagas, aoFinalizar) {
+  const resultados = vagas.map((vaga) => {
+    const resultado = vaga.calcularCompatibilidade(candidato.habilidades);
+    return {
+      id: vaga.id,
+      empresa: vaga.empresa,
+      cargo: vaga.cargo,
+      ...resultado,
+    };
+  });
+
+  aoFinalizar(resultados);
+
+  return resultados;
+}
+
+export function criarContadorDeAnalises() {
+  let total = 0;
+
+  return function contar() {
+    total = total + 1;
+    return total;
+  };
+}
+export function encontrarMelhorVaga(resultados) {
+  return resultados.reduce((melhor, atual) =>
+    atual.percentual > melhor.percentual ? atual : melhor,
+  );
+}
+
+export function gerarRecomendacao(resultados) {
+  const contagemFaltantes = resultados
+    .flatMap((resultado) => resultado.faltantes)
+    .reduce((acumulador, habilidade) => {
+      acumulador[habilidade] = (acumulador[habilidade] || 0) + 1;
+      return acumulador;
+    }, {});
+
+  const ordenadas = Object.entries(contagemFaltantes).sort(
+    (a, b) => b[1] - a[1],
+  );
+
+  if (ordenadas.length === 0) {
+    return "Você já atende todos os requisitos das vagas analisadas!";
+  }
+
+  const topHabilidades = ordenadas
+    .slice(0, 3)
+    .map(([habilidade]) => habilidade);
+  return `Priorize estudar: ${topHabilidades.join(", ")}.`;
+}
