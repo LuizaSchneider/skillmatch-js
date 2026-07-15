@@ -43,3 +43,27 @@ export class VagaFrontEnd extends Vaga {
     return { ...resultadoBase, percentual: percentualComPeso };
   }
 }
+
+export function processarAnalise(candidato, vagas, aoFinalizar) {
+  const resultados = vagas.map((vaga) => {
+    const resultado = vaga.calcularCompatibilidade(candidato.habilidades);
+    return {
+      empresa: vaga.empresa,
+      cargo: vaga.cargo,
+      ...resultado,
+    };
+  });
+
+  aoFinalizar(resultados);
+
+  return resultados;
+}
+
+export function criarContadorDeAnalises() {
+  let total = 0;
+
+  return function contar() {
+    total = total + 1;
+    return total;
+  };
+}

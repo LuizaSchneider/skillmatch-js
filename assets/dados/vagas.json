@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "empresa": "TechStart",
+    "cargo": "Desenvolvedor Front-End Júnior",
+    "requisitos": ["JavaScript", "GitHub", "Lógica de Programação"],
+    "salario": 2500,
+    "modalidade": "Remoto",
+    "stack": "Vanilla JS"
+  },
+  {
+    "id": 2,
+    "empresa": "CodeLab",
+    "cargo": "Estágio Front-End",
+    "requisitos": ["JavaScript", "Kanban", "GitHub", "CSS"],
+    "salario": 1600,
+    "modalidade": "Híbrido",
+    "stack": "React"
+  },
+  {
+    "id": 3,
+    "empresa": "WebSolutions",
+    "cargo": "Programador JavaScript Júnior",
+    "requisitos": ["JavaScript", "Arrays", "Objetos", "Funções"],
+    "salario": 2800,
+    "modalidade": "Presencial",
+    "stack": "Vue"
+  },
+  {
+    "id": 4,
+    "empresa": "PixelCraft",
+    "cargo": "Front-End Júnior (UI Focus)",
+    "requisitos": ["HTML", "CSS", "Figma", "JavaScript"],
+    "salario": 2400,
+    "modalidade": "Remoto",
+    "stack": "Vanilla JS"
+  }
+]

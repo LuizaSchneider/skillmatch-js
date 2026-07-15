@@ -1,5 +1,13 @@
 import { iniciarBotoesHabilidades, iniciarFormulario } from "./ui.js";
-import { Vaga } from "./motor.js";
+import {
+  VagaFrontEnd,
+  processarAnalise,
+  criarContadorDeAnalises,
+} from "./motor.js";
 
 iniciarBotoesHabilidades();
 iniciarFormulario();
+
+buscarVagas().then((vagas) => {
+  console.log(vagas);
+});
