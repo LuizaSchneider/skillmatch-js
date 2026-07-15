@@ -1,6 +1,7 @@
 body {
   margin: 0px;
-  font-family: "Roboto", Helvetica, sans-serif;
+  font-family: "Roboto Flex", Helvetica, sans-serif;
+  font-weight: normal;
   color: #111111;
   background-color: #efefef;
 }
@@ -28,6 +29,16 @@ dd {
 .titulo-container {
   padding-bottom: 40px;
 }
+
+.titulo-container h1 {
+  font-family: "Roboto Serif", serif;
+  font-weight: 100;
+}
+.titulo-container p {
+  font-family: "Roboto Serif", serif;
+  font-weight: 100;
+}
+
 .container {
   box-sizing: border-box;
   padding-left: 40px;
@@ -39,6 +50,7 @@ dd {
   align-items: center;
   gap: 20px;
 }
+
 .card {
   display: block;
   background-color: #ffffff;
@@ -51,20 +63,29 @@ dd {
   box-sizing: border-box;
 }
 
-.card:first-child {
-  margin-bottom: 0;
+.introducao-bg p {
+  font-weight: 100;
 }
 
 .card p {
   padding-bottom: 6px;
-  font-weight: bold;
   font-size: 14px;
+  font-weight: 500;
+}
+
+.formulario p label {
+  padding-left: 6px;
+  font-weight: 600;
+}
+
+.card:first-child {
+  margin-bottom: 0;
 }
 
 .formulario input[type="text"],
 .formulario input[type="number"] {
   width: 260px;
-  border-style: solid;
+  box-sizing: border-box;
   border-radius: 4px;
   border-color: #d9d9d9;
   padding: 10px;
@@ -81,6 +102,7 @@ dd {
 .habilidades p {
   text-align: center;
   margin-bottom: 6px;
+  font-weight: 500;
 }
 
 .habilidades p span {
@@ -89,7 +111,6 @@ dd {
   font-size: 12px;
 }
 
-/* container extra pra agrupar os botões*/
 .habilidades-botoes {
   display: flex;
   flex-wrap: wrap;
