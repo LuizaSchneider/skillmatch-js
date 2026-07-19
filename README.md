@@ -45,3 +45,7 @@ Durante o desenvolvimento, usei o `debugger`/console do DevTools para investigar
 ## Kanban
 
 https://github.com/users/LuizaSchneider/projects/2
+
+## Figma
+
+https://www.figma.com/design/Y3z4izIObIEcFsfV42kMV2/skilmatch?node-id=0-1&p=f&t=mtekSeh7pAbUdXmg-0
