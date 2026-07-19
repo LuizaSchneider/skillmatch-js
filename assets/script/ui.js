@@ -2,9 +2,11 @@ import {
   processarAnalise,
   encontrarMelhorVaga,
   gerarRecomendacao,
+  definirNivelExperiencia,
+  criarContadorDeAnalises,
 } from "./motor.js";
 import { buscarVagas, salvarPerfil, carregarPerfilSalvo } from "./dados.js";
-
+const contarAnalise = criarContadorDeAnalises();
 export function iniciarBotoesHabilidades() {
   const limiteHabilidades = 5;
   const botoes = document.querySelectorAll(
@@ -81,7 +83,7 @@ function criarCardVaga(resultado, ehMelhorVaga) {
   return card;
 }
 
-function renderizarResultados(resultados) {
+function renderizarResultados(resultados, candidato) {
   const container = document.querySelector("#resultados");
   container.innerHTML = "";
 
@@ -92,6 +94,14 @@ function renderizarResultados(resultados) {
     container.appendChild(vazio);
     return;
   }
+
+  const nivel = definirNivelExperiencia(candidato.experienciaMeses);
+  const numeroAnalise = contarAnalise();
+
+  const resumoEl = document.createElement("p");
+  resumoEl.classList.add("resumo-analise");
+  resumoEl.textContent = `${candidato.nome} — Nível ${nivel} (${candidato.experienciaMeses} meses de experiência) · Análise nº ${numeroAnalise}`;
+  container.appendChild(resumoEl);
 
   const melhorVaga = encontrarMelhorVaga(resultados);
   const recomendacao = gerarRecomendacao(resultados);
@@ -166,7 +176,7 @@ export function iniciarFormulario() {
       const vagas = await buscarVagas();
 
       processarAnalise(candidato, vagas, (resultados) => {
-        renderizarResultados(resultados);
+        renderizarResultados(resultados, candidato);
       });
     } catch (erro) {
       renderizarErro("Não foi possível carregar as vagas. Tente novamente.");
