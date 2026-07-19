@@ -95,3 +95,8 @@ export function gerarRecomendacao(resultados) {
     .map(([habilidade]) => habilidade);
   return `Priorize estudar: ${topHabilidades.join(", ")}.`;
 }
+export function definirNivelExperiencia(meses) {
+  if (meses < 6) return "Iniciante";
+  if (meses < 24) return "Júnior";
+  return "Pleno";
+}
